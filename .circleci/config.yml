@@ -8,7 +8,7 @@ jobs:
       - run: dotnet restore
       - run: dotnet build
       - run: dotnet test --no-build AbstractEnum.Tests
-      - run: dotnet pack
+      - run: dotnet pack --output nugetTarget
       - store_artifacts:
-          path: /bin/Debug/*.nupkg
+          path: AbstractEnum.Net\AbstractEnum.Net\nugetTarget
         
