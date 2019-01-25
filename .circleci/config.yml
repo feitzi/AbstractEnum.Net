@@ -5,7 +5,6 @@ jobs:
       - image: microsoft/dotnet:2.1.300-preview2-sdk-alpine
     steps:
       - checkout
-      - run: find .
       - run: dotnet restore
       - run: dotnet build
       - run: dotnet test --no-build AbstractEnum.Tests
