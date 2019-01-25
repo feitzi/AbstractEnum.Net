@@ -10,5 +10,5 @@ jobs:
       - run: dotnet test --no-build AbstractEnum.Tests
       - run: dotnet pack
       - store_artifacts:
-          path: /*.nupkg
+          path: /bin/Debug/*.nupkg
         
