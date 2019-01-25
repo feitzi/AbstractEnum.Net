@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AbstractEnum.Net", "AbstractEnum.Net\AbstractEnum.Net.csproj", "{D4FE1613-E020-4141-AD8B-F15AC2B5E487}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AbstractEnum.Tests", "AbstractEnum.Tests\AbstractEnum.Tests.csproj", "{67FCAF84-3D07-461F-9263-348114D98039}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D4FE1613-E020-4141-AD8B-F15AC2B5E487}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4FE1613-E020-4141-AD8B-F15AC2B5E487}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4FE1613-E020-4141-AD8B-F15AC2B5E487}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4FE1613-E020-4141-AD8B-F15AC2B5E487}.Release|Any CPU.Build.0 = Release|Any CPU
+		{67FCAF84-3D07-461F-9263-348114D98039}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67FCAF84-3D07-461F-9263-348114D98039}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67FCAF84-3D07-461F-9263-348114D98039}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67FCAF84-3D07-461F-9263-348114D98039}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
