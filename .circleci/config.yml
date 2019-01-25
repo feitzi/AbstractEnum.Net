@@ -10,5 +10,5 @@ jobs:
       - run: dotnet test --no-build AbstractEnum.Tests
       - run: dotnet pack --output nugetTarget
       - store_artifacts:
-          path: AbstractEnum.Net/AbstractEnum.Net/nugetTarget
+          path: AbstractEnum.Net/nugetTarget
         
