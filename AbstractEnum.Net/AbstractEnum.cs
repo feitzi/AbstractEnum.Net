@@ -6,7 +6,7 @@ using System.Runtime.Serialization;
 
 namespace AbstractEnum.Net {
     [Serializable]
-    [DataContract(Namespace = "http://github.com/feitzi/abstractEnumeration")]
+    [DataContract(Namespace = "https://github.com/feitzi/AbstractEnum.Net")]
     public abstract class AbstractEnum<TEnumeration> : AbstractEnum<TEnumeration, string>
         where TEnumeration : AbstractEnum<TEnumeration, string> {
         protected AbstractEnum(string value) : base(value) {
@@ -16,7 +16,7 @@ namespace AbstractEnum.Net {
 
     [Serializable]
     [DebuggerDisplay("{" + nameof(Value) + "}")]
-    [DataContract(Namespace = "http://github.com/feitzi/abstractEnumeration")]
+    [DataContract(Namespace = "https://github.com/feitzi/AbstractEnum.Net")]
     public abstract class AbstractEnum<TEnumeration, TValue> : IComparable<TEnumeration>, IEquatable<TEnumeration>
         where TEnumeration : AbstractEnum<TEnumeration, TValue>
         where TValue : IComparable {

@@ -2,7 +2,7 @@
 
     <PropertyGroup>
         <TargetFramework>netstandard2.0</TargetFramework>
-        <PackageId>feitzi.AbstractEnum.Net.Sample</PackageId>
+        <PackageId>feitzi.AbstractEnum.Net</PackageId>
         <Version>0.0.2</Version>
         <Authors>Mathias Feitzinger (mathias@feitzinger.org)</Authors>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
