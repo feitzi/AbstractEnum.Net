@@ -2,7 +2,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: microsoft/dotnet:2.1.300-preview2-sdk-alpine
+      - image: microsoft/dotnet:latest
     steps:
       - checkout
       - run: dotnet restore
@@ -11,4 +11,38 @@ jobs:
       - run: dotnet pack --output nugetTarget
       - store_artifacts:
           path: AbstractEnum.Net/nugetTarget
+  publishNuget:
+    docker:
+      - image: microsoft/dotnet:latest
+    steps:
+      - run: find .
+workflows:
+  version: 2
+  build-and-publish:
+      jobs:
+        - build
+        - publishNuget:
+            requires:
+              - build
+            filters:
+              branches:
+                only: 
+                  - master
+                  - circleCiBuild
+  nightly:
+    triggers:
+      - schedule:
+          cron: "0 0 * * *"
+          filters:
+            branches:
+              only:
+                - master
+                - develop
+    jobs:
+      - build
+  commit:
+    jobs:
+      - build
+
+  
         
