@@ -13,9 +13,9 @@ jobs:
           path: AbstractEnum.Net/nugetPackages
           destination: nugetPackages
       - persist_to_workspace:
-          root: .
+          root: AbstractEnum.Net/
           paths:
-            - AbstractEnum.Net/nugetPackages          
+            - nugetPackages          
   publishNuget:
     docker:
       - image: microsoft/dotnet:latest
@@ -23,7 +23,7 @@ jobs:
       - attach_workspace:
           at: .
       - run: find .
-      - run: dotnet nuget push *.nupkg --api-key ${NUGET_KEY} --source ${NUGET_SOURCE}
+      - run: dotnet nuget push nugetPackages/*.nupkg --api-key ${NUGET_KEY} --source ${NUGET_SOURCE}
 workflows:
   version: 2
   build-and-publish:
