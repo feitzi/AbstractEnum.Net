@@ -32,11 +32,10 @@ workflows:
         - publishNuget:
             requires:
               - build
-            filters:
-              branches:
-                only: 
-                  - master
-                  - circleCiBuild
+      filters:
+        branches:
+          only: 
+            - master
   nightly:
     triggers:
       - schedule:
@@ -49,12 +48,12 @@ workflows:
     jobs:
       - build
   commit:
-    branches:
-      ignore:
-        - master
-        - circleCiBuild
     jobs:
       - build
+    filters:
+      branches:
+        ignore:
+          - master
 
   
         

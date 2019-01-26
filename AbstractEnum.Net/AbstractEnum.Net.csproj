@@ -3,9 +3,8 @@
     <PropertyGroup>
         <TargetFramework>netstandard2.0</TargetFramework>
         <PackageId>feitzi.AbstractEnum.Net</PackageId>
-        <Version>0.0.2</Version>
+        <Version>0.0.1</Version>
         <Authors>Mathias Feitzinger (mathias@feitzinger.org)</Authors>
-        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     </PropertyGroup>
 
 </Project>
