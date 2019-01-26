@@ -27,31 +27,28 @@ jobs:
 workflows:
   version: 2
   build-and-publish:
-      jobs:
-        - build
-        - publishNuget:
-            requires:
-              - build
-      filters:
-        branches:
-          only: 
-            - master
+    jobs:
+      - build
+      - publishNuget:
+          requires:
+            - build
+    branches:
+      only: 
+        - master
   nightly:
     triggers:
       - schedule:
           cron: "0 0 * * *"
-          filters:
-            branches:
-              only:
-                - master
-                - develop
     jobs:
       - build
+    branches:
+      only:
+        - master
+        - develop
   commit:
     jobs:
       - build
-    filters:
-      branches:
+    branches:
         ignore:
           - master
 
