@@ -8,14 +8,22 @@ jobs:
       - run: dotnet restore
       - run: dotnet build
       - run: dotnet test --no-build AbstractEnum.Tests
-      - run: dotnet pack --output nugetTarget
+      - run: dotnet pack --output nugetPackages
       - store_artifacts:
-          path: AbstractEnum.Net/nugetTarget
+          path: AbstractEnum.Net/nugetPackages
+          destination: nugetPackages
+      - persist_to_workspace:
+          root: .
+          paths:
+            - AbstractEnum.Net/nugetPackages          
   publishNuget:
     docker:
       - image: microsoft/dotnet:latest
     steps:
+      - attach_workspace:
+          at: .
       - run: find .
+      - run: dotnet nuget push *.nupkg --api-key ${NUGET_KEY} --source ${NUGET_SOURCE	}
 workflows:
   version: 2
   build-and-publish:
