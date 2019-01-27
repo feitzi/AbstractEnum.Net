@@ -7,7 +7,7 @@ jobs:
       - checkout
       - run: dotnet restore
       - run: dotnet build --configuration Release
-      - run: dotnet test --no-build AbstractEnum.Tests
+      - run: dotnet test --no-build --configuration Release AbstractEnum.Tests
       - run: dotnet pack --output nugetPackages
       - store_artifacts:
           path: AbstractEnum.Net/nugetPackages
