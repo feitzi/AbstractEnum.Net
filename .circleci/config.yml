@@ -34,8 +34,9 @@ workflows:
             - build
           filters:
             branches:
-              only:
-                - master
+              tags:
+                only: /^v.*/
+              ignore: /.*/
   nightly:
     triggers:
       - schedule:
