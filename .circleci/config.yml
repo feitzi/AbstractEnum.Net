@@ -26,30 +26,24 @@ jobs:
       - run: dotnet nuget push nugetPackages/*.nupkg --api-key ${NUGET_KEY} --source ${NUGET_SOURCE}
 workflows:
   version: 2
-  build-and-publish:
-    branches:
-      only: 
-        - master
+  build-and-publish:  
     jobs:
       - build
       - publishNuget:
           requires:
             - build
+          filters:
+            branches:
+              only:
+                - master
   nightly:
     triggers:
       - schedule:
-          cron: "0 0 * * *"
-          filters:
-            only:
-              - master
-              - develop
-            
-    jobs:
-      - build
-  commit:
-    branches:
-      ignore:
-        - master
+        cron: "0 0 * * *"
+        filters:
+          only:
+            - master
+            - develop            
     jobs:
       - build
 
