@@ -33,9 +33,9 @@ workflows:
           requires:
             - build
           filters:
-            branches:
               tags:
                 only: /^v.*/
+            branches:
               ignore: /.*/
   nightly:
     triggers:
