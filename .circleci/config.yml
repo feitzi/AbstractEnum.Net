@@ -32,11 +32,11 @@ workflows:
   build-and-publish:  
     jobs:
       - build:
-        filters:
-          tags:
-            only: /^v.*/
-          branches:
-            only: /.*/
+          filters:
+            tags:
+              only: /^v.*/
+            branches:
+              only: /.*/
       - publishNuget:
           requires:
             - build
