@@ -6,6 +6,9 @@ jobs:
     steps:
       - checkout
       - run: dotnet restore
+      - run: apt-get update
+      - run: apt-get install -y libgit2-dev
+      - run: ln -s /usr/lib/x86_64-linux-gnu/libgit2.so /lib/x86_64-linux-gnu/libgit2-15e1193.so
       - run: dotnet build --configuration Release
       - run: dotnet test --no-build --configuration Release AbstractEnum.Tests
       - run: dotnet pack --output nugetPackages
