@@ -1,0 +1,4 @@
+next-version: 0.1
+assembly-versioning-scheme: MajorMinorPatch
+mode: ContinuousDelivery
+tag-prefix: '[vV]'

@@ -2,6 +2,14 @@
 
     <PropertyGroup>
         <TargetFramework>netstandard2.0</TargetFramework>
+        <PackageId>feitzi.AbstractEnum.Net</PackageId>
+        <Authors>Mathias Feitzinger (mathias@feitzinger.org)</Authors>
     </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="GitVersionTask" Version="4.0.1-beta1-59">
+          <PrivateAssets>All</PrivateAssets>
+      </PackageReference>
+    </ItemGroup>
 
 </Project>
