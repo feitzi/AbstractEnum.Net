@@ -41,9 +41,10 @@ workflows:
       - schedule:
         cron: "0 0 * * *"
         filters:
-          only:
-            - master
-            - develop            
+          branches:
+            only:
+              - master
+              - develop            
     jobs:
       - build
 
