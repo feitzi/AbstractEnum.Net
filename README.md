@@ -1,3 +1,5 @@
+Build Status  [![CircleCI](https://circleci.com/gh/feitzi/AbstractEnum.Net/tree/master.svg?style=svg)](https://circleci.com/gh/feitzi/AbstractEnum.Net/tree/master)
+
 # AbstractEnum.Net
 With AbstractEnum.net you can easily use Java like enums with own enum properties. 
 This package is based on the code of [HeadSpringLabs/Enumeration](https://github.com/HeadspringLabs/Enumeration).
@@ -5,7 +7,7 @@ This package is based on the code of [HeadSpringLabs/Enumeration](https://github
 You are welcome to contribute to this .Net Standard Library with a new pull request or create a new issue.
 
 ## Usage of AbstratEnum.Net
-Here is a self-explaining code snipped which illustrates the definition of weekdays with a property ´isWeekday'
+Here is a self-explaining code snipped which illustrates the definition of weekdays with a property `isWeekday`
 
 #### Declare a new 'Enum'-Typ
 ````c#
