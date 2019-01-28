@@ -5,7 +5,8 @@
 [![Build history](https://buildstats.info/circleci/chart/feitzi/AbstractEnum.Net?includeBuildsFromPullRequest=false&branch=master)](https://circleci.com/gh/feitzi/AbstractEnum.Net/tree/master)
 
 # AbstractEnum.Net
-With AbstractEnum.net you can easily use Java like enums with own enum properties in your .net code. 
+With AbstractEnum.Net you can easily use Java like enums with own enum properties in your .Net code. 
+As a result of using AbstractEnum.Net like Enums you get more readable and  practical enums types. (Obviously AbstactEnum.Net Enums are basicly only sinleton classes with static fields, but practicly you can almost use it like default Enums)
 This package is based on the code of [HeadSpringLabs/Enumeration](https://github.com/HeadspringLabs/Enumeration).
 
 You are welcome to contribute to this .Net Standard Library with a new pull request or with a new [issue](https://github.com/feitzi/AbstractEnum.Net/issues/new).
