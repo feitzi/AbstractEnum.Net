@@ -1,5 +1,8 @@
-Build Status  [![CircleCI](https://circleci.com/gh/feitzi/AbstractEnum.Net/tree/master.svg?style=svg)](https://circleci.com/gh/feitzi/AbstractEnum.Net/tree/master)
+[![NuGet Badge](https://buildstats.info/nuget/AbstractEnum.Net?includePreReleases=true)](https://www.nuget.org/packages/AbstractEnum.Net)
 
+[![CircleCI](https://circleci.com/gh/feitzi/AbstractEnum.Net/tree/master.svg?style=svg)](https://circleci.com/gh/feitzi/AbstractEnum.Net/tree/master)
+
+[![Build history](https://buildstats.info/circleci/chart/feitzi/AbstractEnum.Net?includeBuildsFromPullRequest=false&branch=master)](https://circleci.com/gh/feitzi/AbstractEnum.Net/tree/master)
 
 # AbstractEnum.Net
 With AbstractEnum.net you can easily use Java like enums with own enum properties in your .net code. 
