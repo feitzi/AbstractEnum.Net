@@ -8,7 +8,7 @@ This package is based on the code of [HeadSpringLabs/Enumeration](https://github
 You are welcome to contribute to this .Net Standard Library with a new pull request or with a new [issue](https://github.com/feitzi/AbstractEnum.Net/issues/new).
 
 ## Install
-> [uget Install](https://www.nuget.org/packages/AbstractEnum.Net/)
+> [nuget Install](https://www.nuget.org/packages/AbstractEnum.Net/)
 > ```Install-Package AbstractEnum.Net```
 ## Usage of AbstratEnum.Net
 Here is a self-explaining code snipped which illustrates the definition of weekdays with a property `isWeekday`
