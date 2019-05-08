@@ -5,12 +5,15 @@ using System.Reflection;
 using System.Runtime.Serialization;
 
 namespace AbstractEnum.Net {
+
     [Serializable]
     [DataContract(Namespace = "https://github.com/feitzi/AbstractEnum.Net")]
     public abstract class AbstractEnum<TEnumeration> : AbstractEnum<TEnumeration, string>
         where TEnumeration : AbstractEnum<TEnumeration, string> {
+
         protected AbstractEnum(string value) : base(value) {
         }
+
     }
 
 
@@ -20,15 +23,14 @@ namespace AbstractEnum.Net {
     public abstract class AbstractEnum<TEnumeration, TValue> : IComparable<TEnumeration>, IEquatable<TEnumeration>
         where TEnumeration : AbstractEnum<TEnumeration, TValue>
         where TValue : IComparable {
+
         private static readonly Lazy<TEnumeration[]> Enumerations = new Lazy<TEnumeration[]>(GetEnumerations);
 
         [DataMember(Order = 0)]
         private readonly TValue value;
 
         protected AbstractEnum(TValue value) {
-            if (value == null) {
-                throw new ArgumentNullException(nameof(value));
-            }
+            if (value == null) throw new ArgumentNullException(nameof(value));
 
             this.value = value;
         }
@@ -90,9 +92,7 @@ namespace AbstractEnum.Net {
 
         public static TEnumeration Parse(TValue value) {
             bool parsingSuccessful = TryParse(e => e.ValueEquals(value), out TEnumeration result);
-            if (parsingSuccessful) {
-                return result;
-            }
+            if (parsingSuccessful) return result;
 
             throw new ArgumentOutOfRangeException($"Value {value} is not a valid type of {typeof(TValue).FullName}");
         }
@@ -100,5 +100,7 @@ namespace AbstractEnum.Net {
         protected virtual bool ValueEquals(TValue value) {
             return Value.Equals(value);
         }
+
     }
+
 }

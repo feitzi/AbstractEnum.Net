@@ -8,6 +8,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionFiles", "SolutionFi
 ProjectSection(SolutionItems) = preProject
 	GitVersion.yml = GitVersion.yml
 	README.md = README.md
+	.editorconfig = .editorconfig
 EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".circleCI", ".circleCI", "{1EBE714F-84AA-444B-A64C-D73DA26BD9C8}"
