@@ -4,6 +4,7 @@ using AbstractEnum.Tests.TestData;
 using Xunit;
 
 namespace AbstractEnum.Tests {
+
     public class SerializationTests {
 
         [Fact]
@@ -17,7 +18,7 @@ namespace AbstractEnum.Tests {
                 binaryFormatter.Serialize(memoryStream, saturday);
                 serializedData = memoryStream.ToArray();
             }
-            
+
             //deserialize weekday
             Weekday deserializedDay;
             using (MemoryStream memoryStream = new MemoryStream(serializedData)) {
@@ -31,5 +32,7 @@ namespace AbstractEnum.Tests {
             Assert.Equal(Weekday.Saturday, deserializedDay);
             Assert.NotEqual(Weekday.Sunday, deserializedDay);
         }
+
     }
+
 }
