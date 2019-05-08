@@ -4,8 +4,7 @@ using System.Linq;
 using System.Reflection;
 using System.Runtime.Serialization;
 
-namespace AbstractEnum.Net {
-
+namespace AbstractEnumDotNet {
     [Serializable]
     [DataContract(Namespace = "https://github.com/feitzi/AbstractEnum.Net")]
     public abstract class AbstractEnum<TEnumeration> : AbstractEnum<TEnumeration, string>

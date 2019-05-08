@@ -19,6 +19,8 @@ Here is a self-explaining code snipped which illustrates the definition of weekd
 
 #### Declare a new 'Enum'-Typ
 ````c#
+using AbstractEnumDotNet;
+
  public class Weekday : AbstractEnum<Weekday> {
         public static readonly Weekday Monday    = new Weekday("Monday",true);
         public static readonly Weekday Tuesday   = new Weekday("Tuesday", true);
