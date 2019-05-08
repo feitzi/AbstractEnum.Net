@@ -17,7 +17,7 @@ namespace Test.AbstractEnumDotNet {
                 binaryFormatter.Serialize(memoryStream, saturday);
                 serializedData = memoryStream.ToArray();
             }
-            
+
             //deserialize weekday
             Weekday deserializedDay;
             using (MemoryStream memoryStream = new MemoryStream(serializedData)) {
@@ -31,5 +31,7 @@ namespace Test.AbstractEnumDotNet {
             Assert.Equal(Weekday.Saturday, deserializedDay);
             Assert.NotEqual(Weekday.Sunday, deserializedDay);
         }
+
     }
+
 }
