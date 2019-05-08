@@ -1,7 +1,7 @@
 using System;
-using AbstractEnum.Net;
+using AbstractEnumDotNet;
 
-namespace AbstractEnum.Tests.TestData {
+namespace Test.AbstractEnumDotNet.TestData {
     
     [Serializable]
     public class Weekday : AbstractEnum<Weekday> {

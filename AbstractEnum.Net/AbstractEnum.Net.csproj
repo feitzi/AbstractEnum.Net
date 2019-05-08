@@ -4,6 +4,7 @@
         <TargetFramework>netstandard2.0</TargetFramework>
         <PackageId>AbstractEnum.Net</PackageId>
         <Authors>Mathias Feitzinger (mathias@feitzinger.org)</Authors>
+        <RootNamespace>AbstractEnumDotNet</RootNamespace>
     </PropertyGroup>
 
     <ItemGroup>
