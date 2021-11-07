@@ -1,16 +1,10 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFramework>netstandard2.0</TargetFramework>
+        <TargetFramework>net5.0</TargetFramework>
         <PackageId>AbstractEnum.Net</PackageId>
         <Authors>Mathias Feitzinger (mathias@feitzinger.org)</Authors>
         <RootNamespace>AbstractEnumDotNet</RootNamespace>
+        <LangVersion>9</LangVersion>
     </PropertyGroup>
-
-    <ItemGroup>
-      <PackageReference Include="GitVersionTask" Version="4.0.1-beta1-59">
-          <PrivateAssets>All</PrivateAssets>
-      </PackageReference>
-    </ItemGroup>
-
 </Project>

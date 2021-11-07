@@ -1,9 +1,10 @@
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
-using Test.AbstractEnumDotNet.TestData;
+using AbstractEnum.Tests.TestData;
 using Xunit;
 
-namespace Test.AbstractEnumDotNet {
+namespace AbstractEnum.Tests {
+
     public class SerializationTests {
 
         [Fact]

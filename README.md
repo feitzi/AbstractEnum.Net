@@ -1,23 +1,26 @@
 [![NuGet Badge](https://buildstats.info/nuget/AbstractEnum.Net?includePreReleases=true)](https://www.nuget.org/packages/AbstractEnum.Net)
 
-[![CircleCI](https://circleci.com/gh/feitzi/AbstractEnum.Net/tree/master.svg?style=svg)](https://circleci.com/gh/feitzi/AbstractEnum.Net/tree/master)
-
-[![Build history](https://buildstats.info/circleci/chart/feitzi/AbstractEnum.Net?includeBuildsFromPullRequest=false&branch=master)](https://circleci.com/gh/feitzi/AbstractEnum.Net/tree/master)
-
 # AbstractEnum.Net
-With AbstractEnum.Net you can easily use Java like enums with own enum properties in your .Net code. 
-As a result of using AbstractEnum.Net like Enums you get more readable and  practical enums types. (Obviously AbstactEnum.Net Enums are basicly only sinleton classes with static fields, but practicly you can almost use it like default Enums)
+
+With AbstractEnum.Net you can easily use Java like enums with own enum properties in your .Net code. As a result of
+using AbstractEnum.Net like Enums you get more readable and practical enums types. (Obviously AbstactEnum.Net Enums are
+basicly only sinleton classes with static fields, but practicly you can almost use it like default Enums)
 This package is based on the code of [HeadSpringLabs/Enumeration](https://github.com/HeadspringLabs/Enumeration).
 
-You are welcome to contribute to this .Net Standard Library with a new pull request or with a new [issue](https://github.com/feitzi/AbstractEnum.Net/issues/new).
+You are welcome to contribute to this .Net Standard Library with a new pull request or with a
+new [issue](https://github.com/feitzi/AbstractEnum.Net/issues/new).
 
 ## Install
+
 > [nuget Install](https://www.nuget.org/packages/AbstractEnum.Net/)
 > ```Install-Package AbstractEnum.Net```
+
 ## Usage of AbstratEnum.Net
+
 Here is a self-explaining code snipped which illustrates the definition of weekdays with a property `isWeekday`
 
 #### Declare a new 'Enum'-Typ
+
 ````c#
 using AbstractEnumDotNet;
 
@@ -39,6 +42,7 @@ using AbstractEnumDotNet;
 ````
 
 #### Usage of Typ Weekday
+
 ````c#
  Weekday sunday = Weekday.Sunday;
  var isWeekday = sunday.IsWeekday; // false
