@@ -13,6 +13,8 @@ jobs:
 
         steps:
             -   uses: actions/checkout@v2
+                with:
+                    fetch-depth: 0
             -   name: Install GitVersion
                 uses: gittools/actions/gitversion/setup@v0.9.7
                 with:
@@ -29,6 +31,6 @@ jobs:
                 uses: gittools/actions/gitversion/execute@v0.9.7
                 with:
                     useConfigFile: true
-#                    updateAssemblyInfo: true
+            #                    updateAssemblyInfo: true
             -   name: Test
                 run: dotnet test --no-build --verbosity normal
