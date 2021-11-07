@@ -1,7 +1,8 @@
-using Test.AbstractEnumDotNet.TestData;
+using AbstractEnum.Tests.TestData;
 using Xunit;
 
-namespace Test.AbstractEnumDotNet {
+namespace AbstractEnum.Tests {
+
     public class EnumerationTest {
 
         [Fact]

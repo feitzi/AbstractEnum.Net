@@ -5,6 +5,7 @@ using System.Reflection;
 using System.Runtime.Serialization;
 
 namespace AbstractEnumDotNet {
+
     [Serializable]
     [DataContract(Namespace = "https://github.com/feitzi/AbstractEnum.Net")]
     public abstract class AbstractEnum<TEnumeration> : AbstractEnum<TEnumeration, string>
@@ -25,16 +26,14 @@ namespace AbstractEnumDotNet {
 
         private static readonly Lazy<TEnumeration[]> Enumerations = new Lazy<TEnumeration[]>(GetEnumerations);
 
-        [DataMember(Order = 0)]
-        private readonly TValue value;
-
         protected AbstractEnum(TValue value) {
             if (value == null) throw new ArgumentNullException(nameof(value));
 
-            this.value = value;
+            Value = value;
         }
 
-        public TValue Value => value;
+        [field: DataMember(Order = 0)]
+        public TValue Value { get; }
 
         public int CompareTo(TEnumeration other) {
             return Value.CompareTo(other == default(TEnumeration) ? default(TValue) : other.Value);
