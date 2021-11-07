@@ -20,7 +20,6 @@
     </ItemGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\AbstactEnum.Net\AbstactEnum.Net.csproj"/>
         <ProjectReference Include="..\AbstractEnum.Net\AbstractEnum.Net.csproj"/>
     </ItemGroup>
 

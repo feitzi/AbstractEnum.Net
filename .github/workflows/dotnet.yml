@@ -29,6 +29,6 @@ jobs:
                 uses: gittools/actions/gitversion/execute@v0.9.7
                 with:
                     useConfigFile: true
-                    updateAssemblyInfo: true
+#                    updateAssemblyInfo: true
             -   name: Test
                 run: dotnet test --no-build --verbosity normal
